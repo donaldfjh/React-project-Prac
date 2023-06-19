@@ -1,0 +1,12 @@
+import React from 'react'
+import { SingleColor } from './SingleColor'
+import { nanoid } from 'nanoid'
+export const ColorList = ({colors,copyHandler}) => {    
+  return (
+    <article className='colors'>
+        {colors.map((color,index)=>{
+            return <SingleColor color = {color} key ={nanoid()} index = {index} copyHandler={copyHandler} />
+        })}
+    </article>
+  )
+}
